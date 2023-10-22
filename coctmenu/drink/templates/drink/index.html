@@ -1,0 +1,30 @@
+{% extends 'drink/base.html' %}
+
+{% block content %}
+
+    <div class="portfolio-wrap">
+{% for c in coct %}
+    <div class="portfolio-item">
+    <div class="portfolio-item-wrap">
+    <a href="">
+    <p><img src="{{c.photo.url}}"></p>
+    <div class="portfolio-item-inner">
+    <div class="portfolio-heading">
+    <h3>{{ c.title }}</h3>
+</div>
+<ul>
+    <li></li>
+{{ c.content }}
+</li>
+<li>{{ c.price }}</li>
+</div>
+    </a>
+    </div>
+    </div>
+
+    
+{% endfor %}
+
+    </div>
+    
+{% endblock %}
